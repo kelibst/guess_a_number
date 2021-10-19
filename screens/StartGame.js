@@ -1,32 +1,35 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, Button } from "react-native";
+import globalStyles from "../styles/globalStyles";
 
 const StartGame = (props) => {
   return (
     <View style={styles.screen}>
-      <Text>Start a new game.</Text>
-      <Text>Select a new number</Text>
-      <TextInput style={styles.textInp} />
-      <View style={styles.buttonContainer}>
+      <Text style={globalStyles.txtPrim}>Start a new game.</Text>
+      <Text style={globalStyles.txtSec}>Select a new number</Text>
+      <View style={styles.inputContainer}>
+        <TextInput />
+      </View>
+      
+      <View style={styles.btnContainer}>
         <Button title="Reset" onPress={() => {}} />
         <Button title="Confirm" onPress={() => {}} />
       </View>
-    </View>
+    </View> 
   );
 };
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    alignItems: "center",
+    alignItems: "center", 
+    justifyContent: "center",
     padding: 10,
   },
-//   textInp: {
-//     margin: "10",
-//     shadowColor: "#000",
-//     shadowOffset: {
-//       width: 0,
-//       height: 2,
-//     },
-//   },
+
+  btnContainer: {
+    flexDirection: "row",
+    width: "90%",
+    justifyContent: "space-evenly"
+  },
 });
 export default StartGame;
