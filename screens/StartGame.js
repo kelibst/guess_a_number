@@ -17,6 +17,9 @@ const StartGame = (props) => {
   const numInpHandler = (inp) => {
     setVal(inp.replace(/[^0-9]/g, ""));
   };
+  const resetHandler = () => {
+    setVal('')
+  }
   return (
     <TouchableWithoutFeedback onPress={() => {
       Keyboard.dismiss();
@@ -37,7 +40,7 @@ const StartGame = (props) => {
 
           <View style={styles.btnContainer}>
             <View style={styles.btn}>
-              <Button title="Reset" onPress={() => {}} />
+              <Button title="Reset" onPress={resetHandler} />
             </View>
             <View style={styles.btn}>
               <Button title="Confirm" onPress={() => {}} />
