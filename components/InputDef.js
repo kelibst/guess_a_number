@@ -3,7 +3,7 @@ import { View, Text, TextInput, StyleSheet } from "react-native";
 
 const InputDef = (props) => {
   return (
-    <TextInput
+    <TextInput {...props}
       style={{ ...styles.input, ...props.style }}
       blurOnSubmit
       keyboardType="number-pad" 
